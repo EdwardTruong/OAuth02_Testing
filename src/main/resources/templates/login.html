@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+
+    <div class="container unauthenticated">
+      <div>
+        With GitHub: <a th:href="@{http://localhost:8080/oauth2/authorization/github}">click here</a>
+        <!-- In spring boot tutorial have URL to access github login :
+        http://localhost:8080/login/oauth2/code/github -->
+      </div>
+      <div>
+        With Google: <a th:href="@{/oauth2/authorization/google}">click here</a>
+      </div>
+      <div>
+        With Facebook: <a th:href="@{/oauth2/authorization/facebook}">click here</a>
+      </div>
+    </div>
+
+    <form th:action=@{/processLogin} method="POST">
+      <input type="email" id="username" name="username" class="form-control"
+									placeholder="Email" required> 
+      <input type="password" id="password" name="password"
+                class="form-control" placeholder="Mật khẩu" required>   
+        <input type="submit" value=" Go">        
+    </form>
+  </body>
+</html>
