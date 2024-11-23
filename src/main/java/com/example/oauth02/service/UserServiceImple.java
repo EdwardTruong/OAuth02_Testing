@@ -26,7 +26,8 @@ public class UserServiceImple implements UserService {
   public UserEntity findById(Integer id) {
     Optional<UserEntity> result = userDao.findById(id);
     return result.orElseThrow(
-        () -> new UserNotFoundException(MESSENGER_NOT_FOUND.USER_NOT_FOUND_ID + ": (" + id + ")."));
+        () -> new UserNotFoundException(MESSENGER_NOT_FOUND.USER_NOT_FOUND_ID + ": ("
+            + id + ")."));
   }
 
   @Override

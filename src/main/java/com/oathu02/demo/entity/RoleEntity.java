@@ -1,7 +1,7 @@
-package com.example.oauth02.entity;
+package com.oathu02.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.example.oauth02.util.ERole;
+import com.oathu02.demo.util.ERole;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,13 +27,13 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RoleEntity {
 
-@Id
-@Column(name = "id")
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@JsonIgnore
-int id;
+  @Id
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @JsonIgnore
+  int id;
 
-@Enumerated(EnumType.STRING)
-@Column(name = "name")
-ERole name;
+  @Enumerated(EnumType.STRING)
+  @Column(name = "name")
+  ERole name;
 }
