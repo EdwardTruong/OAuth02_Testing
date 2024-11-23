@@ -27,13 +27,13 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RoleEntity {
 
-@Id
-@Column(name = "id")
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@JsonIgnore
-int id;
+  @Id
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @JsonIgnore
+  int id;
 
-@Enumerated(EnumType.STRING)
-@Column(name = "name")
-ERole name;
+  @Enumerated(EnumType.STRING)
+  @Column(name = "name")
+  ERole name;
 }

@@ -9,8 +9,8 @@ import com.example.oauth02.entity.UserEntity;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
-Optional<UserEntity> findUserByEmail(String email);
+  Optional<UserEntity> findUserByEmail(String email);
 
-Boolean existsByEmail(String email);
+  Boolean existsByEmail(String email);
 
 }
